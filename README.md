@@ -49,6 +49,15 @@ where:
 - <code>data_path</code>: path to the data. Default: data.
 - <code>saved_model_path</code>: path to saved the optimal model using validation/development dataset. Default: MODELS.
 
+You may get some results like:
+```
+top-5 results: recall@5 = 0.1559, ndcg@5 = 0.1613, map@5 = 0.1076
+top-10 results: recall@10 = 0.1513, ndcg@10 = 0.1547, map@10 = 0.0851
+top-20 results: recall@20 = 0.1477, ndcg@20 = 0.1473, map@20 = 0.0669
+top-50 results: recall@50 = 0.1819, ndcg@50 = 0.1553, map@50 = 0.0562
+top-100 results: recall@100 = 0.2533, ndcg@100 = 0.1825, map@100 = 0.0579
+```
+
 ### running some baselines: Cofactor, WMF:
 - Running cofactor:
 
@@ -67,8 +76,13 @@ top-100 results: recall@100 = 0.2545, ndcg@100 = 0.1783, map@100 = 0.0540
 **python rme_rec.py --dataset ml10m --model wmf --n_factors 40 --reg 1.0 --reg_embed 1.0**
 
 You may get the results like:
-
-
+```
+top-5 results: recall@5 = 0.1258, ndcg@5 = 0.1283, map@5 = 0.0810
+top-10 results: recall@10 = 0.1209, ndcg@10 = 0.1231, map@10 = 0.0624
+top-20 results: recall@20 = 0.1290, ndcg@20 = 0.1230, map@20 = 0.0507
+top-50 results: recall@50 = 0.1641, ndcg@50 = 0.1349, map@50 = 0.0442
+top-100 results: recall@100 = 0.2375, ndcg@100 = 0.1640, map@100 = 0.0470
+```
 
 
 # CITATION:
