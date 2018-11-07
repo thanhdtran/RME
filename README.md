@@ -37,17 +37,17 @@ do 2 steps:
 **python rme_rec.py --dataset ml10m --model rme --neg_item_inference 1 --n_factors 40 --reg 1.0 --reg_embed 1.0**
 
 where:
-- <code>model<code>: the model to run. There are 3 choices: <code>rme<code> (our model), <code>wmf<code>, <code>cofactor<code>.
-- <code>reg<code>: is the regularization hyper-parameter for user and item latent factors (alpha and beta).
-- <code>reg_emb<code>: is the regularization hyper-parameter for user and item context latent factors (gamma, theta, delta).
-- <code>n_factors<code>: number of latent factors (or embedding size). Default: n_factors = 40.
-- <code>neg_item_inference<code>: whether or not running our user-oriented EM like algorithm for sampling disliked items for users.
-- <code>neg_item_inference<code>: negative sample ratio per user. If a user consumed 10 items, and this neg_sample_ratio = 0.2 --> randomly sample 2 negative items for the user. Default: 0.2.
+- <code>model</code>: the model to run. There are 3 choices: <code>rme</code> (our model), <code>wmf</code>, <code>cofactor</code>.
+- <code>reg</code>: is the regularization hyper-parameter for user and item latent factors (alpha and beta).
+- <code>reg_emb</code>: is the regularization hyper-parameter for user and item context latent factors (gamma, theta, delta).
+- <code>n_factors</code>: number of latent factors (or embedding size). Default: n_factors = 40.
+- <code>neg_item_inference</code>: whether or not running our user-oriented EM like algorithm for sampling disliked items for users.
+- <code>neg_item_inference</code>: negative sample ratio per user. If a user consumed 10 items, and this neg_sample_ratio = 0.2 --> randomly sample 2 negative items for the user. Default: 0.2.
 
 #### other hyper-parameters:
-- s: the shifted constant, which is a hyper-parameter to control density of SPPMI matrix. Default: s = 1.
-- data_path: path to the data. Default: data.
-- saved_model_path: path to saved the optimal model using validation/development dataset. Default: MODELS.
+- <code>s</code>: the shifted constant, which is a hyper-parameter to control density of SPPMI matrix. Default: s = 1.
+- <code>data_path</code>: path to the data. Default: data.
+- <code>saved_model_path</code>: path to saved the optimal model using validation/development dataset. Default: MODELS.
 
 ### running some baselines: Cofactor, WMF:
 - Running cofactor:
