@@ -55,7 +55,13 @@ where:
 **python rme_rec.py --dataset ml10m --model cofactor --n_factors 40 --reg 1.0 --reg_embed 1.0**
 
 You may get the results like:
-
+```
+top-5 results: recall@5 = 0.1522, ndcg@5 = 0.1537, map@5 = 0.1000
+top-10 results: recall@10 = 0.1383, ndcg@10 = 0.1425, map@10 = 0.0756
+top-20 results: recall@20 = 0.1438, ndcg@20 = 0.1391, map@20 = 0.0606
+top-50 results: recall@50 = 0.1762, ndcg@50 = 0.1484, map@50 = 0.0518
+top-100 results: recall@100 = 0.2545, ndcg@100 = 0.1783, map@100 = 0.0540
+```
 - Running WMF:
 
 **python rme_rec.py --dataset ml10m --model wmf --n_factors 40 --reg 1.0 --reg_embed 1.0**
