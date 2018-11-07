@@ -37,12 +37,12 @@ do 2 steps:
 **python rme_rec.py --dataset ml10m --model rme --neg_item_inference 1 --n_factors 40 --reg 1.0 --reg_embed 1.0**
 
 where:
-- model: the model to run. There are 3 choices: rme (our model), wmf, cofactor.
-- reg: is the regularization hyper-parameter for user and item latent factors (alpha and beta).
-- reg_emb: is the regularization hyper-parameter for user and item context latent factors (gamma, theta, delta).
-- n_factors: number of latent factors (or embedding size). Default: n_factors = 40.
-- neg_item_inference: whether or not running our user-oriented EM like algorithm for sampling disliked items for users.
-- neg_item_inference: negative sample ratio per user. If a user consumed 10 items, and this neg_sample_ratio = 0.2 --> randomly sample 2 negative items for the user. Default: 0.2.
+- <code>model<code>: the model to run. There are 3 choices: <code>rme<code> (our model), <code>wmf<code>, <code>cofactor<code>.
+- <code>reg<code>: is the regularization hyper-parameter for user and item latent factors (alpha and beta).
+- <code>reg_emb<code>: is the regularization hyper-parameter for user and item context latent factors (gamma, theta, delta).
+- <code>n_factors<code>: number of latent factors (or embedding size). Default: n_factors = 40.
+- <code>neg_item_inference<code>: whether or not running our user-oriented EM like algorithm for sampling disliked items for users.
+- <code>neg_item_inference<code>: negative sample ratio per user. If a user consumed 10 items, and this neg_sample_ratio = 0.2 --> randomly sample 2 negative items for the user. Default: 0.2.
 
 #### other hyper-parameters:
 - s: the shifted constant, which is a hyper-parameter to control density of SPPMI matrix. Default: s = 1.
@@ -54,9 +54,16 @@ where:
 
 **python rme_rec.py --dataset ml10m --model cofactor --n_factors 40 --reg 1.0 --reg_embed 1.0**
 
+You may get the results like:
+
 - Running WMF:
 
 **python rme_rec.py --dataset ml10m --model wmf --n_factors 40 --reg 1.0 --reg_embed 1.0**
+
+You may get the results like:
+
+
+
 
 # CITATION:
 
