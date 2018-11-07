@@ -1,14 +1,22 @@
 # RME
-data format: userId,movieId
 
-data for running our source code: ml10m.
+This repo contains source code for our paper: "Regularizing Matrix Factorization with User and Item Embeddings for Recommendation" published in CIKM 2018
+
+# DATA FORMAT 
+
+
+#### Data
+- First line: the header "userId,movieId"
+- Second line --> last line: [userId],[movieId]
+
+### data for running our source code: ml10m.
 We preprocessed it and splitted into train, vad/dev, test. Their paths are:
 
-data/ml10m/train.csv
+- data/ml10m/train.csv
 
-data/ml10m/test.csv
+- data/ml10m/test.csv
 
-data/ml10m/validation.csv
+- data/ml10m/validation.csv
 
 format of user and disliked items: userId,movieId
 
