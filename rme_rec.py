@@ -267,6 +267,8 @@ if args.neg_item_inference:
 
 
 LOAD_NEGATIVE_MATRIX = True
+if args.model.lower() != 'rme':
+    LOAD_NEGATIVE_MATRIX = False
 recalls = np.zeros(5, dtype=np.float32) #store results of topk recommendation in range [5, 10, 20, 50, 100]
 ndcgs = np.zeros(5, dtype=np.float32)
 maps = np.zeros(5, dtype=np.float32)
