@@ -30,10 +30,10 @@ do 2 steps:
 
 
 # RUNNING:
-## Step 1: produce user-user co-occurrence matrix and item-item co-occurrence matrix
+### Step 1: produce user-user co-occurrence matrix and item-item co-occurrence matrix
 python produce_positive_cooccurrence.py --dataset ml10m
 
-## Step 2: run RME with our user-oriented EM-like algorithm to infer disliked items for users:
+### Step 2: run RME with our user-oriented EM-like algorithm to infer disliked items for users:
 python rme_rec.py --dataset ml10m --model rme --neg_item_inference 1 --lam 1.0 --lam_emb 1.0
 
 where:
