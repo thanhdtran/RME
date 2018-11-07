@@ -50,7 +50,12 @@ where:
 - saved_model_path: path to saved the optimal model using validation/development dataset. Default: MODELS.
 
 ### running some baselines: Cofactor, WMF:
+- Running cofactor:
+
 **python rme_rec.py --dataset ml10m --model cofactor --n_factors 40 --reg 1.0 --reg_embed 1.0**
+
+- Running WMF:
+
 **python rme_rec.py --dataset ml10m --model wmf --n_factors 40 --reg 1.0 --reg_embed 1.0**
 
 # CITATION:
