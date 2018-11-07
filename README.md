@@ -31,10 +31,10 @@ do 2 steps:
 
 # RUNNING:
 ### Step 1: produce user-user co-occurrence matrix and item-item co-occurrence matrix
-python produce_positive_cooccurrence.py --dataset ml10m
+**_python produce_positive_cooccurrence.py --dataset ml10m**_
 
 ### Step 2: run RME with our user-oriented EM-like algorithm to infer disliked items for users:
-python rme_rec.py --dataset ml10m --model rme --neg_item_inference 1 --n_factors 40 --reg 1.0 --reg_embed 1.0
+**_python rme_rec.py --dataset ml10m --model rme --neg_item_inference 1 --n_factors 40 --reg 1.0 --reg_embed 1.0**_
 
 where:
 - model: the model to run. There are 3 choices: rme (our model), wmf, cofactor.
@@ -49,6 +49,9 @@ where:
 - data_path: path to the data. Default: data.
 - saved_model_path: path to saved the optimal model using validation/development dataset. Default: MODELS.
 
+### running some baselines: Cofactor, WMF:
+**_python rme_rec.py --dataset ml10m --model cofactor --n_factors 40 --reg 1.0 --reg_embed 1.0**_
+**_python rme_rec.py --dataset ml10m --model wmf --n_factors 40 --reg 1.0 --reg_embed 1.0**_
 
 # CITATION:
 
