@@ -87,7 +87,7 @@ top-100 results: recall@100 = 0.2375, ndcg@100 = 0.1640, map@100 = 0.0470
 
 # CITATION:
 
-If you use this Caser in your paper, please cite the paper:
+If you use our method (RME) in your paper, please cite the paper:
 
 ```
 @inproceedings{tran2018regularizing,
