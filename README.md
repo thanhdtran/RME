@@ -42,7 +42,7 @@ where:
 - <code>reg_emb</code>: is the regularization hyper-parameter for user and item context latent factors (gamma, theta, delta).
 - <code>n_factors</code>: number of latent factors (or embedding size). Default: n_factors = 40.
 - <code>neg_item_inference</code>: whether or not running our user-oriented EM like algorithm for sampling disliked items for users. In case we have available user-disliked_items --> set this to 0.
-- <code>neg_item_inference</code>: negative sample ratio per user. If a user consumed 10 items, and this neg_sample_ratio = 0.2 --> randomly sample 2 negative items for the user. Default: 0.2.
+- <code>neg_sample_ratio</code>: negative sample ratio per user. If a user consumed 10 items, and this neg_sample_ratio = 0.2 --> randomly sample 2 negative items for the user. Default: 0.2.
 
 #### other hyper-parameters:
 - <code>s</code>: the shifted constant, which is a hyper-parameter to control density of SPPMI matrix. Default: s = 1.
