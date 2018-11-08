@@ -16,6 +16,10 @@ set or validation set)
 should only be used when calculating test scores
 """
 
+"""
+Steal this evaluation from original cofactor sourcecode
+"""
+
 from joblib import Parallel, delayed
 import sys
 import os
