@@ -26,14 +26,20 @@ We preprocessed it and splitted into train, vad/dev, test. Their paths are:
 do 2 steps:
 - saved it to data/ml10m/train_neg.csv
 - build the disliked item-item co-occurrence by running (assume that the dataset is ml10m):
-**produce_negative_cooccurrence.py --dataset ml10m**
+**python produce_negative_cooccurrence.py --dataset ml10m**
 
 
 # RUNNING:
-### Step 1: produce user-user co-occurrence matrix and item-item co-occurrence matrix
+### Step 1.1: produce user-user co-occurrence matrix and item-item co-occurrence matrix
 **python produce_positive_cooccurrence.py --dataset ml10m**
 
-### Step 2: run RME with our user-oriented EM-like algorithm to infer disliked items for users:
+### Step 1.2: prduce negative co-occurrence matrix of item-item (if the dislike items are available, if not available, that's ok, we will infer disliked item in step 2):
+**python produce_negative_cooccurrence.py --dataset ml10m**
+
+### Step 2.1: run RME with available disliked items (in case you ran step 1.2 already):
+**python rme_rec.py --dataset ml10m --model rme --neg_item_inference 0 --n_factors 40 --reg 1.0 --reg_embed 1.0**
+
+### Step 2.2: run RME with our user-oriented EM-like algorithm to infer disliked items for users (in case disliked items are not available, and you are not able to run step 1.2):
 **python rme_rec.py --dataset ml10m --model rme --neg_item_inference 1 --n_factors 40 --reg 1.0 --reg_embed 1.0**
 
 where:
