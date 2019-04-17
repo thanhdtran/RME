@@ -15,7 +15,7 @@ class ModelRunner:
                  save_dir ):
 
         self.save_dir = save_dir
-
+        if not os.path.exists(self.save_dir): os.mkdir(self.save_dir)
         self.train_data = train_data
         self.test_data = test_data
         self.vad_data = vad_data
